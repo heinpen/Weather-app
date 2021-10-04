@@ -1,4 +1,4 @@
-import "./search.css";
+import './search.css';
 
 function Search(props) {
   const { search, setQuery } = props;
@@ -10,7 +10,8 @@ function Search(props) {
         placeholder="Type city..."
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button className="search__button" onClick={() => search()}></button>
+      <button type="button" aria-label="Search" className="search__button" onClick={() => search()} />
+
     </div>
   );
 }
