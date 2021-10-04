@@ -1,4 +1,4 @@
-import "./info.css";
+import './info.css';
 
 function Info(props) {
   const { weather } = props;
@@ -9,11 +9,13 @@ function Info(props) {
         // 1. Show ... when nothing typed yet.
         // 2. Show error message when no city was found.
         // 3. Else show content.
-        typeof weather.main === "undefined" ? (
+
+        // eslint-disable-next-line no-nested-ternary
+        typeof weather.main === 'undefined' ? (
           weather.message ? (
             weather.message
           ) : (
-            "..."
+            '...'
           )
         ) : (
           <>
@@ -26,6 +28,7 @@ function Info(props) {
             <div className="info__clouds">{weather.weather[0].description}</div>
           </>
         )
+
       }
     </div>
   );
