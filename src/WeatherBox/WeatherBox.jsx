@@ -22,7 +22,7 @@ function WeatherBox() {
 
   return (
     <div className="weather-box">
-      <Search search={() => search} setQuery={setQuery} />
+      <Search search={() => search()} setQuery={setQuery} />
       <Info weather={weather} />
     </div>
   );
