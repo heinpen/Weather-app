@@ -22,8 +22,8 @@ function WeatherBox() {
 
   function handleError(error) {
     error
-      ? setWeather({ message: 'Your browser is not supporting geolocation' })
-      : setWeather({ message: error.message });
+      ? setWeather({ message: error.message })
+      : setWeather({ message: 'Your browser is not supporting geolocation' });
   }
 
   useEffect(() => {
