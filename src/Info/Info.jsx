@@ -2,7 +2,7 @@ import './info.css';
 
 function Info(props) {
   const { weather } = props;
-  console.log(weather);
+
   return (
     <div className="info">
       {
