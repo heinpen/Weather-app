@@ -11,6 +11,7 @@ function WeatherBox() {
   const [weather, setWeather] = useState({});
   const [query, setQuery] = useState('');
 
+  // Use useFef to preserve mounted.current value for subsequent renders.
   const mounted = useRef(false);
   if (!mounted.current) {
     if (navigator.geolocation) {
@@ -27,6 +28,7 @@ function WeatherBox() {
   }
 
   useEffect(() => {
+    // Set mounted.current to true after first render.
     mounted.current = true;
   }, []);
 
