@@ -27,10 +27,11 @@ function WeatherApp() {
       : setWeather({ message: 'Your browser is not supporting geolocation' });
   }
 
+  // Pass empty array as second argument so it never needs to re-run after first mount.
   useEffect(() => {
     // Set mounted.current to true after first render.
     mounted.current = true;
-  }, [mounted.current]);
+  }, []);
 
   function getUserPosition(position) {
     const { longitude, latitude } = position.coords;
