@@ -7,7 +7,7 @@ const api = {
   base: 'https://api.openweathermap.org/data/2.5/',
 };
 
-function WeatherBox() {
+function WeatherApp() {
   const [weather, setWeather] = useState({});
   const [query, setQuery] = useState('');
 
@@ -30,7 +30,7 @@ function WeatherBox() {
   useEffect(() => {
     // Set mounted.current to true after first render.
     mounted.current = true;
-  }, []);
+  }, [mounted.current]);
 
   function getUserPosition(position) {
     const { longitude, latitude } = position.coords;
@@ -61,4 +61,4 @@ function WeatherBox() {
   );
 }
 
-export default WeatherBox;
+export default WeatherApp;
