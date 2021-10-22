@@ -1,1 +1,1 @@
-# [Weather-app](https://salihub.github.io/Weather-app/dist-prod/index.html)
+# [Weather-app](https://salihub.github.io/Weather-app/index.html)
